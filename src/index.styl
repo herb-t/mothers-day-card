@@ -1,0 +1,121 @@
+@require 'styles/normalize.styl'
+@require 'styles/mixins-flex.styl'
+
+html
+body
+  width 100%
+  height 100%
+
+body
+  position relative
+  overflow-x hidden
+  font-family 'Josefin Sans', sans-serif
+  padding 0 25px
+  -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
+  background url('images/bg-tile-x.png')repeat center center
+
+canvas
+  width 100%
+  height 100%
+
+@require 'styles/styles.styl'
+
+.head
+  position relative
+  top 140px
+  z-index 1
+
+.body
+  position relative
+  top 95px
+  z-index 10
+
+.legs
+  position relative
+  z-index 15
+  margin-bottom 100px
+
+.greeting
+  position relative
+  top 75px
+  text-align center
+
+  h1
+    font 700 38px/50px 'Josefin Slab', serif
+    margin 0
+    color #fc5b9e
+
+    &:last-of-type
+      margin-bottom 20px
+
+  p
+    font 400 18px/32px 'Josefin Sans', sans-serif;
+    margin 0
+    color #4e194f
+
+  .da-bomb
+     color #fc5b9e
+
+  .personal
+    position relative
+    bottom -32px
+    left 50%
+    opacity 0
+    transform translateX(-50%)
+
+  @media screen and (max-width: 767px)
+    h1
+      font-size 27px
+      line-height 39px
+
+    p
+      font-size 16px
+      line-height 30px
+
+    .personal
+      font-size 18px
+      line-height 32px
+
+.arrow-fill
+  fill #fc5b9e
+  transition fill 0.3s ease-in-out
+
+svg:hover .arrow-fill
+  fill #4e194f
+
+footer
+  l-flex()
+  l-center()
+  l-around-justified()
+  width 100%
+  height 50px
+
+  @media screen and (max-width: 660px)
+    l-vertical-reverse()
+
+    .my-logo
+      margin-bottom 20px
+
+.my-logo
+  width 100%
+  max-width 75px
+  height auto
+
+.social-nav
+  margin-bottom 25px
+  l-flex()
+  l-center()
+
+  a
+    margin-right 20px
+    &:last-of-type
+      margin-right 0
+
+  svg
+    width 30px
+    height 30px
+
+    path
+      fill #fc5b9e

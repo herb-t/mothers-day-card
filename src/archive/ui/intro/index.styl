@@ -1,0 +1,92 @@
+.block--intro
+  background $color-background-white
+  margin-top 0
+  overflow visible
+  padding-bottom 60px
+  position relative
+
+  @media $media-query-block-intro
+    transform none !important
+
+  .block--intro__content
+    display block
+    transform translate3d(0, -280px, 0)
+
+    @media $media-query-block-intro
+      transform translate3d(0, 0, 0)
+
+    &:before
+      background $color-background-white
+      content ''
+      display block
+      height 374px
+      left 50%
+      position absolute
+      transform translate3d(-50%, 0, 0)
+      width 1261px
+
+    .intro__content
+      display flex
+      justify-content space-between
+
+      @media $media-query-mobile
+        display block
+
+    .intro__copy
+      color $color-headline-black
+      display block
+      font-size 14px
+      font-weight 400
+      line-height 25px
+      margin 0 60px 0 0
+      max-width 719px
+      padding-top 36px
+      position relative
+
+      @media $media-query-mobile
+        font-size 13px
+        line-height 21px
+        margin 0 0 24px
+        padding-top 24px
+
+      .intro__title
+        color $color-headline-blue
+        font-size 28px
+        font-weight 600
+        letter-spacing -.5px
+        line-height 36px
+        margin 0 0 12px
+
+        @media $media-query-mobile
+          font-size 24px
+          line-height 28px
+          margin-bottom 8px
+
+      .intro__button-scroll
+        display none
+
+        @media $media-query-mobile
+          display block
+
+          .button
+            margin-top 18px
+            width 100%
+
+    .intro__button-check
+      height 50px
+      margin-top 12px
+
+      @media $media-query-mobile
+        margin-top 40px
+        text-align center
+
+    .intro__social
+      display flex
+      justify-content center
+      margin-top 36px
+      position relative
+      min-width 327px
+
+      @media $media-query-mobile
+        margin-top 24px
+        min-width auto

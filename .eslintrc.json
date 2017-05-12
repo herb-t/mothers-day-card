@@ -1,0 +1,27 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "extends": "eslint:recommended",
+  "rules": {
+    "comma-dangle": ["error", "never"],
+    "no-console": "off",
+    "array-bracket-spacing": ["error", "always"],
+    "object-curly-spacing": ["error", "always"]
+  },
+  "globals": {
+    "ga": false,
+    "Power2": false,
+    "Power4": false,
+    "TweenMax": false,
+    "TimelineMax": false,
+    "YT": false,
+    "Swiper": false
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  }
+}

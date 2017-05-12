@@ -1,0 +1,96 @@
+.faqs__list
+  margin 24px 0
+  padding 0
+
+  @media $media-query-mobile
+    margin 12px 0
+
+  .faqs__item
+    border-top 1px solid rgba(27, 28, 36, .1)
+    margin 24px 0
+
+    @media $media-query-mobile
+      margin 12px 0
+
+    &:first-child
+      border 0
+      padding-top 0
+
+  .faqs__term
+    cursor pointer
+    display block
+    font-size 20px
+    font-weight 400
+    line-height 32px
+    margin 0 0 12px
+    padding 24px 160px 0 0
+    position relative
+
+    @media $media-query-mobile
+      font-size 15px
+      line-height 20px
+      padding 12px 48px 0 0
+
+    &:before
+      animation expandBeforeBar .15s $easing-snap forwards
+      background $color-background-blue
+      content ''
+      display block
+      height 1px
+      position absolute
+      right 0
+      top 50%
+      width 10px
+
+    &:after
+      animation expandAfterBar .15s $easing-snap forwards
+      background $color-background-blue
+      content ''
+      display block
+      height 1px
+      position absolute
+      right 0
+      top 50%
+      width 10px
+
+  .faqs__definition
+    font-size 14px
+    font-weight 400
+    line-height 26px
+    margin 12px 0 0
+    max-height 0
+    overflow hidden
+    transition max-height .25s ease-out
+
+    @media $media-query-mobile
+      font-size 12px
+      line-height 18px
+
+  .faqs__toggle
+    display none
+
+    &:checked + .faqs__term
+
+      &:before
+        animation collapseBeforeBar .25s $easing-snap forwards
+
+      &:after
+        animation collapseAfterBar .25s $easing-snap forwards
+
+    &:checked + .faqs__term + .faqs__definition
+      max-height 500px
+      transition max-height .25s ease-in
+
+
+/* show/hide */
+
+[data-open] .faqs__item
+  animation showFaqsItem .25s $easing-snap forwards
+  for i in 1..20
+    &:nth-child({i})
+      animation-delay (i/25)s
+
+.faqs__item
+  animation hideFaqsItem .1s $easing-snap forwards
+  opacity 0
+  transform translateY(-20px)
