@@ -20,9 +20,7 @@
     "prod": "npm-run-all clean mkdir prod:*",
     "prod:copy": "cpx \"static/**/*\" out",
     "prod:styl": "node build-stylus.js --prod",
-    "prod:main": "node build-rollup.js --prod",
-    "gae": "npm-run-all prod gae:*",
-    "gae:static": "cpx \"out/**/*\" gae/static"
+    "prod:main": "node build-rollup.js --prod"
   },
   "pre-commit": [
     "format"

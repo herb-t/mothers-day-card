@@ -25,7 +25,7 @@ function renderBundle(err, data) {
   // const options = {paths: ['src'], compress: args.prod === true};
 
   stylus(data)
-    .use(autoprefixer())
+    // .use(autoprefixer())
     .set('paths', ['src'])
     .set('compress', args.prod === true)
     .render(writeBundle);
