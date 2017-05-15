@@ -1,4 +1,6 @@
 @require 'styles/mixins-flex.styl'
+@require 'styles/styles.styl'
+@require 'styles/spinner.styl'
 
 html
 body
@@ -15,11 +17,11 @@ body
   box-sizing border-box
   background url('images/bg-tile-x.png')repeat center center
 
-canvas
-  width 100%
-  height 100%
+span
+  display inline-block
 
-@require 'styles/styles.styl'
+.body-swap
+  opacity 0
 
 .head
   position relative
@@ -43,11 +45,11 @@ canvas
 
   h1
     font 700 38px/50px 'Josefin Slab', serif
-    margin 0
+    margin 20px 0
     color #fc5b9e
 
-    &:last-of-type
-      margin-bottom 20px
+    &:first-of-type
+      margin-top 0
 
   p
     font 400 18px/32px 'Josefin Sans', sans-serif;
@@ -57,42 +59,58 @@ canvas
   .da-bomb
      color #fc5b9e
 
-  .personal
-    position relative
-    bottom -32px
-    opacity 0
+  .reveal
+    letter-spacing 2px
 
-  .top-greeting
-    position relative
-    bottom -32px
+  .top-greeting,
+  .personal-anim
     opacity 0
+    -webkit-transform translateY(32px)
+    -moz-transform translateY(32px)
+    -ms-transform translateY(32px)
+    -o-transform translateY(32px)
+    transform translateY(32px)
+
+  .greeting-main--1
+    opacity 0
+    -webkit-transform translateX(-100px)
+    -moz-transform translateX(-100px)
+    -ms-transform translateX(-100px)
+    -o-transform translateX(-100px)
+    transform translateX(-100px)
+
+  .greeting-main--2,
+  .greeting-main--3,
+  .greeting-main--4,
+  .greeting-main--5,
+  .greeting-main--6
+    opacity 0
+    font-weight 700
+    -webkit-transform scale(0.25)
+    -moz-transform scale(0.25)
+    -ms-transform scale(0.25)
+    -o-transform scale(0.25)
+    transform scale(0.25)
 
   @media screen and (max-width: 767px)
     h1
       font-size 27px
       line-height 39px
 
-    p
-      font-size 16px
-      line-height 30px
-
-    .personal
-      font-size 18px
-      line-height 32px
-
 .arrow-fill
   fill #fc5b9e
   transition fill 0.3s ease-in-out
 
-svg:hover .arrow-fill
-  fill #4e194f
+@media screen and (min-device-width: 800px)
+  svg:hover .arrow-fill
+    fill #4e194f
 
 footer
   l-flex()
   l-center()
   l-around-justified()
   width 100%
-  height 50px
+  margin-bottom 20px
 
   a
     text-decoration none
@@ -103,16 +121,22 @@ footer
   @media screen and (max-width: 660px)
     l-vertical-reverse()
 
-    .my-logo
-      margin-bottom 20px
+.img-links
+  @media screen and (max-width: 660px)
+    margin-bottom 20px
 
 .my-logo
   width 100%
   max-width 75px
   height auto
 
+.huge-logo
+  width 100%
+  max-width 62px
+  height auto
+  margin-left 20px
+
 .social-nav
-  margin-bottom 25px
   l-flex()
   l-center()
 
@@ -132,5 +156,35 @@ footer
       fill #fc5b9e
       transition fill 0.3s ease-in-out
 
-  a:hover svg path
-    fill #4e194f
+  @media screen and (min-device-width: 800px)
+    a:hover svg path
+      fill #4e194f
+
+.loading-overlay
+  position fixed
+  width 100%
+  height 100%
+  z-index 200
+  top 0
+  left 0
+  opacity 1
+  pointer-events none
+  l-flex()
+  l-center()
+  l-center-justified()
+  l-vertical()
+
+.mobile
+  display none
+  @media screen and (max-width: 767px)
+    display block
+
+.break--greeting
+  display none
+  @media screen and (max-width: 485px)
+    display block
+
+.break--sml
+  display none
+  @media screen and (max-width: 340px)
+    display block

@@ -1,30 +1,24 @@
 let config = {
-  greeting: 'High Der',
-  farewell: 'Later dude',
-  manifest: [ 'images/logo.png' ],
-  gallery1: [
-    'http://placekitten.com/g/250/250',
-    'http://placekitten.com/g/300/300',
-    'http://placekitten.com/g/250/250',
-    'http://placekitten.com/g/300/300',
-    'http://placekitten.com/g/250/250',
-    'http://placekitten.com/g/300/300'
-  ],
-  gallery2: [
-    'http://placekitten.com/g/300/300',
-    'http://placekitten.com/g/250/250',
-    'http://placekitten.com/g/300/300',
-    'http://placekitten.com/g/250/250',
-    'http://placekitten.com/g/300/300',
-    'http://placekitten.com/g/250/250'
-  ],
-  gallery3: [
-    'http://placekitten.com/g/250/250',
-    'http://placekitten.com/g/300/300',
-    'http://placekitten.com/g/250/250',
-    'http://placekitten.com/g/300/300',
-    'http://placekitten.com/g/250/250',
-    'http://placekitten.com/g/300/300'
+  manifest: [
+    'images/sets/head-1.png',
+    'images/sets/head-2.png',
+    'images/sets/head-3.png',
+    'images/sets/head-4.png',
+    'images/sets/head-5.png',
+    'images/sets/head-6.png',
+    'images/sets/body-1.png',
+    'images/sets/body-2.png',
+    'images/sets/body-3.png',
+    'images/sets/body-4.png',
+    'images/sets/body-5.png',
+    'images/sets/body-6.png',
+    'images/sets/legs-1.png',
+    'images/sets/legs-2.png',
+    'images/sets/legs-3.png',
+    'images/sets/legs-4.png',
+    'images/sets/legs-5.png',
+    'images/sets/legs-6.png',
+    'images/logo.png'
   ]
 };
 
